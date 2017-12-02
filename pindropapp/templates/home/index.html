@@ -11,24 +11,19 @@
 <body>
     <div class="topnav" id="myTopnav"><img class="navlogo" src="{% static "home/sisters_logo.gif" %}">
         <a href="#home" ></a>
+        <a href="/">Home</a>
         <a href="#news">News</a>
         <a href="#menu">This Week's Menu</a>
-        <a href="map.html">Portland Map</a>
+        <a href="/dynamic_map/">Portland Map</a>
+        <a href="https://invis.io/28ERPR4SV#/267238105_Landing_Page">Future Feature Example</a>
         <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
       <div class="headerArea"><img src="{% static "home/website_header.png" %}">
     </div>
     <div>
         <h2>What's Happening?</h2>
-        <p>Will insert news clip here</p>
+        <div class="headerArea"><img src="{% static "img/LandingInfo.png" %}">
       </div>
-      <h2>This Week's Menu</h2>
-      <li>Tuesday, 11/28:French Toast with Eggs, Sausage and Salad
-       <li> Wednesday, 11/29:Pasta with Pesto and Chicken, Salad, Rolls and Fruit</li>
-       <li>Thursday, 11/30:Hot Dogs with Fries, Salad and Fruit</li>
-       <li>Friday, 12/01:Baked Ziti with Salad, Toast and Fruit</li>
-       <li>Saturday, 12/02:Beef Burritos with Spanish Rice and Salad</li>
-      </li>
 <script>
 function myFunction() {
     var x = document.getElementById("myTopnav");

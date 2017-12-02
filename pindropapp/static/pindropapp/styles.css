@@ -16,6 +16,7 @@ p {
 .topnav {
   overflow: hidden;
   background-color: #fff;
+  margin-bottom:10px;
 }
 
 .topnav a {
@@ -44,7 +45,6 @@ p {
 }
 .navlogo {
   width:40%;
-  padding: 0px 16px;
 }
 
 @media screen and (max-width: 600px) {

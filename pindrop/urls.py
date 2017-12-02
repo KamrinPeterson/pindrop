@@ -24,4 +24,5 @@ urlpatterns = [
     path('dynamic_map/', views.dynamic_map),
     path('admin/', admin.site.urls),
     path('pins', views.pins),
+    path("addpin", views.addpin)
 ]
