@@ -20,6 +20,7 @@ from pindropapp import views
 
 urlpatterns = [
     path('', views.current_datetime),
+    path('map/', views.google_services),
     path('admin/', admin.site.urls),
     path('pins', views.pins),
     path("addpin", views.addpin)
