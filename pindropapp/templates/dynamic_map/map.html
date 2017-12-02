@@ -33,12 +33,15 @@
     //   map: map,
     //   title: 'Portlandia!'
     // });
+    
     {% for pin in mypins %}
-        new google.maps.Marker({
-          position: new google.maps.LatLng({{pin.longitude}}, {{pin.latitude}}),
-          map: map,
-          title: 'Portlandia!'
-        });
+        {% with pin.type as pin_type %}
+            new google.maps.Marker({
+              position: new google.maps.LatLng({{pin.longitude}}, {{pin.latitude}}),
+              map: map,
+              title: 'Portlandia!'
+            });
+        {% endwith %}
     {% endfor %}
 }
 </script>
