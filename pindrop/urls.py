@@ -21,4 +21,5 @@ from pindropapp import views
 urlpatterns = [
     path('', views.current_datetime),
     path('admin/', admin.site.urls),
+    path('pins', views.pins),
 ]
