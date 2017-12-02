@@ -10,7 +10,7 @@
 
 </head>
 <body>
-        <div class="topnav" id="myTopnav"><img class="navlogo" src="img/sisters_logo.gif">
+        <div class="topnav" id="myTopnav"><img class="navlogo" src="{% static "home/sisters_logo.gif" %}">
             <a href="/" >Home</a>
             <a href="#news">News</a>
             <a href="#menu">This Week's Menu</a>
@@ -21,17 +21,25 @@
 <div id="googleMap" style="width:100%;height:500px;"></div>
 <script>
   function myMap() {
-    var portlandLatLang = new google.maps.LatLng(45.5231,-122.6765);
+    var portlandLatLang = new google.maps.LatLng(45.5221418,-122.6776808);
+
     var mapProp= {
       center:portlandLatLang,
         zoom:15,
     };
     var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    var marker = new google.maps.Marker({
-      position: portlandLatLang,
-      map: map,
-      title: 'Portlandia!'
-    });
+    // var marker = new google.maps.Marker({
+    //   position: portlandLatLang,
+    //   map: map,
+    //   title: 'Portlandia!'
+    // });
+    {% for pin in mypins %}
+        new google.maps.Marker({
+          position: new google.maps.LatLng({{pin.longitude}}, {{pin.latitude}}),
+          map: map,
+          title: 'Portlandia!'
+        });
+    {% endfor %}
 }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD31nwKEamghwtw7mReM5MO9uJ7KyH0S0k&callback=myMap"></script>

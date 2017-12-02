@@ -56,4 +56,6 @@ def google_services(request):
     return HttpResponse(html)
 
 def dynamic_map(request):
-    return render(request, 'dynamic_map/map.html')
+    mypins = Pin.objects.all()
+    dictionary = {"mypins": mypins}
+    return render(request, 'dynamic_map/map.html', dictionary)
