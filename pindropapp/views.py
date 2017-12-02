@@ -8,6 +8,7 @@ from django.core import serializers
 
 from django.http import HttpResponse
 import datetime
+from django.views.decorators.csrf import csrf_exempt
 
 def current_datetime(request):
     now = datetime.datetime.now()
@@ -17,4 +18,19 @@ def current_datetime(request):
 def pins(request):
     allpins = list(Pin.objects.all())
     return HttpResponse(serializers.serialize("json",allpins), content_type = "application/json")
+
+@csrf_exempt
+def addpin(request):
+    pin_data=json.loads(request.body)
+    newpin = Pin(
+        type=pin_data["type"], 
+        latitude=pin_data["latitude"], 
+        longitude=pin_data["longitude"], 
+        cross_street=pin_data["cross_street"], 
+        rating=pin_data["rating"])
+
+    newpin.save()
+    return HttpResponse(serializers.serialize("json",[newpin]), content_type = "application/json")
+
+
 

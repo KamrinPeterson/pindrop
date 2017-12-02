@@ -22,4 +22,5 @@ urlpatterns = [
     path('', views.current_datetime),
     path('admin/', admin.site.urls),
     path('pins', views.pins),
+    path("addpin", views.addpin)
 ]
