@@ -1,4 +1,17 @@
-body {margin:0;}
+body {
+  margin:0;
+  padding:14px;
+}
+
+h2 {
+  color: #9AC1A0;
+  font-family:'Oswald', sans-serif;
+  
+}
+
+p {
+  font-family:"Helvetica Neue";
+}
 
 .topnav {
   overflow: hidden;
@@ -10,7 +23,7 @@ body {margin:0;}
   font-family:'Oswald', sans-serif;
   display: block;
   color: #9AC1A0;
-  text-align: center;
+  text-align: left;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -30,7 +43,8 @@ body {margin:0;}
   display: none;
 }
 .navlogo {
-  width:50%;
+  width:40%;
+  padding: 0px 16px;
 }
 
 @media screen and (max-width: 600px) {
