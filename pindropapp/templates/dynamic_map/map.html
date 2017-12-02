@@ -37,7 +37,7 @@
     {% for pin in mypins %}
         {% with pin.type as pin_type %}
             new google.maps.Marker({
-              position: new google.maps.LatLng({{pin.longitude}}, {{pin.latitude}}),
+              position: new google.maps.LatLng({{pin.latitude}}, {{pin.longitude}}),
               map: map,
               title: 'Portlandia!'
             });
