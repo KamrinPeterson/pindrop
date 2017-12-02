@@ -12,9 +12,19 @@ This application requires Python 3.
 
 ## Viewing
 
-The app will run at the URL http://localhost:8000/
+The app will run at the URL
+
+	http://localhost:8000/
 
 For best results run in Google Chrome with a Responsive/Mobile view:
 
 	View -> Developer Tools -> Show Developer Tools
 	Click "Toggle device toolbar" (CMD+SHIFT+M)
+
+## Admin
+
+The django admin interface is available at
+
+	http://localhost:8000/admin
+
+Default username is `pindrop` and password is `admin123`
