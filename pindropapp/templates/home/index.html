@@ -5,17 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Sisters Of The Road App</title>
-    <link rel="stylesheet" href="styles.css">
+    {% load static %}
+    <link rel="stylesheet" href="{% static "pindropapp/styles.css" %}">
 </head>
 <body>
-    <div class="topnav" id="myTopnav"><img class="navlogo" src="img/sisters_logo.gif">
+    <div class="topnav" id="myTopnav"><img class="navlogo" src="{% static "home/sisters_logo.gif" %}">
         <a href="#home" ></a>
         <a href="#news">News</a>
         <a href="#menu">This Week's Menu</a>
         <a href="map.html">Portland Map</a>
         <a href="javascript:void(0);" style="font-size:30px;" class="icon" onclick="myFunction()">&#9776;</a>
       </div>
-      <div class="headerArea"><img src="img/website_header.png">
+      <div class="headerArea"><img src="{% static "home/website_header.png" %}">
     </div>
     <div>
         <h2>What's Happening?</h2>

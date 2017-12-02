@@ -10,6 +10,9 @@ from django.http import HttpResponse
 import datetime
 import googlemaps
 
+def home(request):
+  return render(request, 'home/index.html')
+
 
 def current_datetime(request):
     now = datetime.datetime.now()
@@ -37,3 +40,6 @@ def google_services(request):
                                          departure_time=now)
     html = "<html><body>Directions are %s.</body></html>" % directions_result
     return HttpResponse(html)
+
+def dynamic_map(request):
+    return render(request, 'dynamic_map/map.html')

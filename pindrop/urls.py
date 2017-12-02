@@ -19,8 +19,9 @@ from django.urls import path
 from pindropapp import views
 
 urlpatterns = [
-    path('', views.current_datetime),
+    path('', views.home),
     path('map/', views.google_services),
+    path('dynamic_map/', views.dynamic_map),
     path('admin/', admin.site.urls),
     path('pins', views.pins),
 ]
