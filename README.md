@@ -4,11 +4,11 @@ This application requires Python 3.
 
 ## Installation
 
-	`pip3 install -r requirements.txt`
+	pip3 install -r requirements.txt
 
 ## Running
 
-	`python3 ./manage.py runserver`
+	python3 ./manage.py runserver
 
 ## Viewing
 
