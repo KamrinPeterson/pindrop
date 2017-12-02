@@ -39,6 +39,7 @@
             new google.maps.Marker({
               position: new google.maps.LatLng({{pin.latitude}}, {{pin.longitude}}),
               map: map,
+              icon: '/static/Restrooms.png',
               title: 'Portlandia!'
             });
         {% endwith %}
